@@ -3,29 +3,21 @@
     <field name="wazuh_sophos.customer_id">\.+</field>
     <description>Sophos Alert - $(name)</description>
   </rule>
-</group>
-<group name="sophos,wazuh_sophos,">
-    <rule id="200701" level="1">
+  <rule id="200701" level="1">
     <if_sid>200700</if_sid>
     <field name="wazuh_sophos.severity">low</field>
     <description>Low Sophos Alert - $(name)</description>
   </rule>
-</group>
-<group name="sophos,wazuh_sophos,">
   <rule id="200702" level="10">
   <if_sid>200700</if_sid>
     <field name="wazuh_sophos.severity">medium</field>
     <description>Medium Sophos Alert - $(name)</description>
   </rule>
-</group>
-<group name="sophos,wazuh_sophos,">
   <rule id="200703" level="12">
   <if_sid>200700</if_sid>
     <field name="wazuh_sophos.severity">high</field>
     <description>High Sophos Alert - $(name)</description>
   </rule>
-</group>
-<group name="sophos,wazuh_sophos,">
   <rule id="200704" level="5">
     <field name="wazuh_sophos.healthcheck">bad</field>
     <description>Sophos Alert - Bad Health</description>
@@ -34,8 +26,6 @@
     <field name="wazuh_sophos.healthcheck">good</field>
     <description>Sophos Alert - Good Health</description>
   </rule>
-</group>
-<group name="sophos,wazuh_sophos,">
   <rule id="200706" level="5">
     <field name="wazuh_sophos.assignedProducts">\.+</field>
     <description>Sophos Alert - Inventory</description>
