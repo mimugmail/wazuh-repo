@@ -143,7 +143,7 @@ def get_alert_details(alert_file_path: str) -> Alert:
     rule_description = str(alert_body["rule"]["description"]) or "Wazuh Alert"
     agent_id = int(alert_body["agent"]["id"])
     agent_name = str(alert_body["agent"]["name"])
-    full_log = str(alert_body["full_log"])
+    full_log = str(alert_body.get("full_log", alert_body)
 
     return Alert(
         rule_id=rule_id,
