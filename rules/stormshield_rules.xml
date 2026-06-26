@@ -1,0 +1,4 @@
+<rule id="100001" level="3">  
+ <decoded_as>stormshield_decoder</decoded_as>  
+ <description>Stormshield logs grouped</description>  
+</rule>
